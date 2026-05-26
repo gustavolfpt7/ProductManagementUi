@@ -2,6 +2,7 @@
 using ProjectManagement.Domain.Interfaces;
 using ProjectManagement.Domain.Entities;
 using ProductManagement.Business.Services;
+using System.ComponentModel.Design;
 
 namespace ProductManagementUi
 {
@@ -19,6 +20,7 @@ namespace ProductManagementUi
                 Console.WriteLine("1 - Adicionar um Produto");
                 Console.WriteLine("2 - Listar os produtos");
                 Console.WriteLine("3 - Procurar por nome");
+                Console.WriteLine("4 - Remover Produto");
                 Console.WriteLine("0 - Para sair");
 
                 string opcao = Console.ReadLine();
@@ -63,6 +65,23 @@ namespace ProductManagementUi
                     else
                     {
                         Console.WriteLine($"{produto.Nome} - {produto.Id} - {produto.Preco}");
+                    }
+
+                }
+                else if (opcao=="4")
+                {
+                    Console.WriteLine("Id do Produto: ");
+                    int id = int.Parse(Console.ReadLine());
+
+                    try
+                    {
+                        servico.RemoverProduto(id);
+                        Console.WriteLine("Produto removido");
+                    }
+                    catch (Exception ex)
+                    {
+
+                        Console.WriteLine("Erro: "+ex.Message);
                     }
                 }
                 else if (opcao=="0")

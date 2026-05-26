@@ -15,8 +15,10 @@ namespace ProjectManagement.Domain.Interfaces
 
         public Produto? ObterPorNome(string nome); //Nullable reference tipe "?" - Permite que seja nulo sem ativar exceção
 
+        public bool Remover(int id);
 
-        
+
+
 
 
     }
