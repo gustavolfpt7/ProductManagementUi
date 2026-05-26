@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="ProductManagementUi/ProjectManagementUi.csproj" />
+  <Project Path="ProjectManagement.Business/ProductManagement.Business.csproj" />
+  <Project Path="ProjectManagement.Data/ProjectManagement.Data.csproj" />
+  <Project Path="ProjectManagement.Domain/ProjectManagement.Domain.csproj" />
+</Solution>
